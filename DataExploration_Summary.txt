@@ -1,0 +1,141 @@
+**Data Exploration Summary: Mathematical Entity Extraction Dataset**
+
+---
+
+### Dataset Overview
+
+**Training Data**: 519 annotations across 30 mathematical document files
+**Validation Data**: 99 annotations 
+**File Format**: Pandas DataFrames with character-level span annotations
+**Text Source**: Mathematical textbooks (undergraduate/graduate level)
+
+---
+
+### Annotation Structure
+
+Each annotation contains:
+* `annoid`: Unique annotation identifier
+* `fileid`: Source document identifier  
+* `start`: Character start position
+* `end`: Character end position
+* `tag`: Entity/identifier type
+* `text`: The actual annotated text span
+
+**Sample File ID Format**:
+```
+(mmd) Homology Theory - Homology Theory - Vick.mmd-victoriacochran-victoria-p75-76-FacebookAI_roberta-base.json
+```
+
+---
+
+### Tag Distribution Analysis
+
+| Tag Type    | Count | Percentage | Description |
+|-------------|-------|------------|-------------|
+| `name`      | 224   | 43.2%      | Identifiers for objects/theorems |
+| `theorem`   | 121   | 23.3%      | Mathematical claims/statements |
+| `definition`| 86    | 16.6%      | New concept introductions |
+| `proof`     | 67    | 12.9%      | Logical justifications |
+| `example`   | 21    | 4.0%       | Concept applications/instances |
+
+**Key Insights**:
+- Names/identifiers are most frequent (43% of annotations)
+- Theorems and definitions make up ~40% combined
+- Examples are relatively rare (only 4%)
+
+---
+
+### Text Characteristics
+
+**Mathematical Notation**: Heavy use of LaTeX formatting
+- Symbols: `\(\mathcal{H}_{n}(X,A)\)`, `\(\operatorname{pt}\)`
+- Formatting: `**3.9 Theorem**`, `_italicized text_`
+
+**Sample Annotation Examples**:
+
+1. **Theorem**: 
+   ```
+   "**3.9 Theorem** (Uniqueness).: _On the category of finite CW pairs..._"
+   Characters 651-1374 (724 chars)
+   ```
+
+2. **Name**: 
+   ```
+   "3.9 Theorem"
+   Characters 653-664 (12 chars)
+   ```
+
+3. **Proof**:
+   ```
+   "Proof.: Let \(\mathcal{H}_{n}(X,A)=H_{n}(X,A;G)\), singular homology..."
+   Characters 500-648 (149 chars)
+   ```
+
+---
+
+### Annotation Length Statistics
+
+**Overall Length Distribution**:
+- Mean: ~150 characters per annotation
+- Range: 12-724 characters
+- Median: ~100 characters
+
+**By Tag Type (Average Length)**:
+- `theorem`: ~200 chars (longest - full mathematical statements)
+- `definition`: ~180 chars 
+- `proof`: ~150 chars
+- `name`: ~15 chars (shortest - just identifiers)
+- `example`: ~120 chars
+
+---
+
+### Multi-Label Considerations
+
+**Nested Annotations**: Some text spans have multiple tags
+- Example: "least element" = both `[definition, name]`
+- "3.9 Theorem" appears within longer theorem text
+
+**BIO Tagging Challenges**:
+1. Converting character spans to token-level tags
+2. Handling overlapping/nested annotations
+3. Multi-label assignment per token
+4. LaTeX notation tokenization
+
+---
+
+### File Distribution
+
+**Document Coverage**: 30 unique mathematical texts
+**Topics**: Homology theory, number theory, commutative algebra, complex manifolds
+**Annotation Density**: ~17 annotations per document (varies widely)
+
+---
+
+### Implementation Implications
+
+**For Few-Shot Prompting (Part 1)**:
+- Need robust tokenization for LaTeX
+- Multi-label BIO tag assignment
+- Context windows must handle long theorems/definitions
+
+**For Model Training (Part 2)**:
+- Character-to-token alignment critical
+- Class imbalance (examples are rare)
+- Mathematical notation understanding required
+
+**For Error Analysis (Part 3)**:
+- Focus on boundary detection accuracy
+- Multi-label prediction evaluation
+- Mathematical reasoning vs. pattern matching
+
+---
+
+### Next Steps
+
+1. **Tokenization Strategy**: Handle LaTeX notation properly
+2. **BIO Conversion**: Map character spans to token-level tags  
+3. **Evaluation Metrics**: Token-level F1 with multi-label support
+4. **Prompt Design**: Include mathematical context examples
+5. **Post-processing**: Filter entities within proofs as specified
+
+---
