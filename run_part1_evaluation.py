@@ -31,13 +31,14 @@ def load_mmd_text(file_id, data_dir="A2-NLP_244"):
 
 def evaluate_on_validation_set():
     """Run Part 1 evaluation on validation set"""
+    
     print("=== PART 1: BASELINE EVALUATION ===")
     
-    # Initialize the few-shot tagger
+    # Initialize the tagger - FIX: Add missing tagger initialization
     tagger = FewShotMathTagger()
     
     # Load validation data
-    val_df = pd.read_json("A2-NLP_244/validation.json")
+    val_df = pd.read_json("A2-NLP_244/val.json")
     
     all_true_tags = []
     all_pred_tags = []

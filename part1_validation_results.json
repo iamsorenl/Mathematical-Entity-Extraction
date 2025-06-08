@@ -1,0 +1,32 @@
+{
+  "part": "Part 1 - Baseline (Few-shot)",
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "files_processed": 3,
+  "total_tokens": 1452,
+  "overall_f1": 0.20264632755343492,
+  "precision": 0.3806006382054419,
+  "recall": 0.3002754820936639,
+  "per_file_results": [
+    {
+      "file_id": "(mmd) Complex Manifolds - Differential Analysis on Complex Manifolds - Wells.mmd-nilay-victoria-p73-75-FacebookAI_roberta-base.json",
+      "num_tokens": 651,
+      "num_true_entities": 347,
+      "num_pred_entities": 121,
+      "f1_score": 0.3504966205954201
+    },
+    {
+      "file_id": "(mmd) Number Theory - Number Theory - An Introduction to Mathematics - Coppel.mmd-nilay-laurel-p60-61-FacebookAI_roberta-base.json",
+      "num_tokens": 454,
+      "num_true_entities": 399,
+      "num_pred_entities": 242,
+      "f1_score": 0.014875566670609698
+    },
+    {
+      "file_id": "(mmd) A Term of Commutative Algebra - Altman.mmd-victoriacochran-victoria-p18-FacebookAI_roberta-base.json",
+      "num_tokens": 347,
+      "num_true_entities": 218,
+      "num_pred_entities": 32,
+      "f1_score": 0.2245243479592083
+    }
+  ]
+}
