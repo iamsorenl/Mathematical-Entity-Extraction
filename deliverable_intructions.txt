@@ -1,0 +1,51 @@
+===========================
+NLP 244 - Assignment 2
+Deliverables Checklist
+===========================
+
+DO NOT SUBMIT:
+- Any large files > 50 MB
+- Model files
+- Training corpus
+
+SUBMIT THE FOLLOWING:
+
+1. Source Code
+---------------
+- All source code used
+- Instructions to:
+  a) Run training (using your best model and hyperparameters)
+  b) Run inference on a particular MMD file and save the output
+
+2. Predictions
+---------------
+- Your predictions on the validation/test set
+
+3. Inference Results
+---------------------
+- Your results from running inference on the provided unannotated MMD files
+- Format: pandas DataFrame saved as JSON with fields:
+  fileid, start, end, tag
+
+4. Report
+----------
+Include the following sections:
+
+a) Model Description
+   - Detailed description of your model
+   - Training procedure
+   - Data processing
+   - Goal: make your work reproducible
+
+b) Validation Scores
+   - Token-level F1 scores on the validation set
+   - Include scores for both baseline and experimental models
+   - Highlight your best model score
+
+c) Error Analysis (Part 3)
+   - What kinds of mistakes is your model making? (with examples)
+   - Why does your model make these mistakes?
+   - How would you improve your model? (go beyond "more data")
+     - Does your solution introduce new problems?
+
+===========================

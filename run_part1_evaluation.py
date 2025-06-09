@@ -6,7 +6,13 @@ from few_shot_tagger import FewShotMathTagger
 from bio_converter import convert_spans_to_bio  # Fixed import name
 from sklearn.metrics import f1_score, classification_report, precision_recall_fscore_support
 import warnings
+from tqdm import tqdm
+import logging
+
+# Suppress warnings and set transformers logging
 warnings.filterwarnings('ignore')
+logging.getLogger("transformers").setLevel(logging.ERROR)
+os.environ["TRANSFORMERS_VERBOSITY"] = "error"
 
 def load_mmd_text(file_id, data_dir="A2-NLP_244"):
     """Load the actual MMD text content"""
@@ -34,7 +40,7 @@ def evaluate_on_validation_set():
     
     print("=== PART 1: BASELINE EVALUATION ===")
     
-    # Initialize the tagger - FIX: Add missing tagger initialization
+    # Initialize the tagger
     tagger = FewShotMathTagger()
     
     # Load validation data
@@ -44,9 +50,12 @@ def evaluate_on_validation_set():
     all_pred_tags = []
     results = []
     
-    # Process each unique file
+    # Get unique files and set up progress bar
+    unique_files = val_df['fileid'].unique()
+    
+    # Process each unique file with progress bar
     processed_files = 0
-    for file_id in val_df['fileid'].unique():
+    for file_id in tqdm(unique_files, desc="Processing validation files"):
         print(f"\nProcessing {file_id}...")
         
         # Get annotations for this file
@@ -59,7 +68,7 @@ def evaluate_on_validation_set():
             continue
         
         try:
-            # Convert annotations to BIO tags - FIXED FUNCTION NAME
+            # Convert annotations to BIO tags
             true_tokens, true_tags = convert_spans_to_bio(text, file_annotations)
             
             # Get predictions from our model
@@ -98,7 +107,7 @@ def evaluate_on_validation_set():
         if processed_files >= 5:  # Increased to 5 for better testing
             print(f"\n⚠️  Processing limited to {processed_files} files for testing...")
             break
-    
+
     if not all_true_tags:
         print("❌ No files were successfully processed!")
         return None
@@ -146,8 +155,9 @@ def run_inference_on_unannotated():
     unannotated_dir = Path("A2-NLP_244/unannotated_mmds")
     
     all_predictions = []
+    mmd_files = list(unannotated_dir.glob("*.mmd"))
     
-    for mmd_file in unannotated_dir.glob("*.mmd"):
+    for mmd_file in tqdm(mmd_files, desc="Processing unannotated files"):
         print(f"Processing {mmd_file.name}...")
         
         with open(mmd_file, 'r', encoding='utf-8') as f:
