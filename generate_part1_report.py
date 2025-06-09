@@ -134,8 +134,8 @@ print(f"Found {{len([t for t in tags if t != 'O'])}} entities")
     with open('Part1_Report.md', 'w') as f:
         f.write(report)
     
-    print("✅ Report saved to 'Part1_Report.md'")
-    print("📊 Summary:")
+    print("Report saved to 'Part1_Report.md'")
+    print("Summary:")
     print(f"   - Validation F1: {val_results['overall_f1']:.3f}")
     print(f"   - Files processed: {val_results['files_processed']}")
     print(f"   - Predictions made: {num_predictions}")

@@ -369,8 +369,8 @@ The analysis suggests that mathematical text requires specialized approaches bey
     with open('Part3_ErrorAnalysis.md', 'w') as f:
         f.write(report)
     
-    print("✅ Part 3 analysis saved to 'Part3_ErrorAnalysis.md'")
-    print("📊 Key Findings:")
+    print("Part 3 analysis saved to 'Part3_ErrorAnalysis.md'")
+    print("Key Findings:")
     print(f"   - False Negative Rate: {error_analysis['quantitative_errors']['false_negative_rate']:.1%}")
     print(f"   - Performance Variance: {error_analysis['quantitative_errors']['performance_variance']:.3f}")
     print(f"   - Unannotated Predictions: {error_analysis['unannotated_analysis']['predictions_made']}")

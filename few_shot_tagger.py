@@ -23,7 +23,7 @@ class FewShotMathTagger:
             )
             print(f"✅ Successfully loaded: {model_name}")
         except Exception as e:
-            print(f"❌ Failed to load {model_name}: {e}")
+            print(f"Failed to load {model_name}: {e}")
             print("Falling back to rule-based system")
             self.use_llm = False
     

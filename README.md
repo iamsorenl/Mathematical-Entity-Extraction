@@ -2,7 +2,7 @@
 
 A comprehensive system for extracting mathematical entities (definitions, theorems, proofs, examples, names, and references) from mathematical textbook content using few-shot prompting with Llama-3.1-8B-Instruct.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -14,7 +14,7 @@ A comprehensive system for extracting mathematical entities (definitions, theore
 - [Troubleshooting](#troubleshooting)
 - [Citation](#citation)
 
-## 🔍 Overview
+## Overview
 
 This project implements a baseline system for mathematical entity extraction using:
 - **Few-shot prompting** with Meta's Llama-3.1-8B-Instruct
@@ -24,16 +24,16 @@ This project implements a baseline system for mathematical entity extraction usi
 
 The system achieves **F1: 0.203** on validation data with **precision: 0.381** and **recall: 0.300**.
 
-## ✨ Features
+## Features
 
-- 🤖 **Few-shot prompting** with 6 carefully crafted examples
-- 🏷️ **Multi-label BIO tagging** (e.g., tokens can be both "definition" and "name")
-- 📐 **LaTeX-aware tokenization** preserving mathematical expressions
-- 🛡️ **Rule-based fallback** for cases when LLM fails
-- 📊 **Comprehensive evaluation** with token-level F1 scores
-- 📝 **Detailed error analysis** and improvement recommendations
+- **Few-shot prompting** with 6 carefully crafted examples
+- **Multi-label BIO tagging** (e.g., tokens can be both "definition" and "name")
+- **LaTeX-aware tokenization** preserving mathematical expressions
+- **Rule-based fallback** for cases when LLM fails
+- **Comprehensive evaluation** with token-level F1 scores
+- **Detailed error analysis** and improvement recommendations
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
 
@@ -90,7 +90,7 @@ huggingface-cli login
 python -c "import nltk; nltk.download('punkt')"
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Run Complete Evaluation Pipeline
 
@@ -116,7 +116,7 @@ After running the pipeline, you'll have:
 - `Part1_Report.md` - Comprehensive Part 1 report
 - `Part3_ErrorAnalysis.md` - Detailed error analysis
 
-## 📖 Usage
+## Usage
 
 ### Individual Components
 
@@ -179,7 +179,7 @@ Edit `few_shot_tagger.py` to adjust:
 - **Max tokens**: `max_new_tokens=1000` (adjust for longer texts)
 - **Model**: Change `model_name` to use different models
 
-## 📊 Results
+## Results
 
 ### Baseline Performance
 
@@ -200,36 +200,43 @@ Edit `few_shot_tagger.py` to adjust:
 
 ### Key Findings
 
-- ✅ **Conservative but accurate**: High precision (38.1%) when confident
-- ⚠️ **High false negative rate**: Missing 59% of true entities
-- 🔍 **Domain variance**: Performance varies significantly across mathematical domains
-- 🚫 **Zero unannotated predictions**: Suggests domain shift or overly strict thresholds
+- **Conservative but accurate**: High precision (38.1%) when confident
+- **High false negative rate**: Missing 59% of true entities
+- **Domain variance**: Performance varies significantly across mathematical domains
+- **Zero unannotated predictions**: Suggests domain shift or overly strict thresholds
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Mathematical-Entity-Extraction/
 ├── README.md                          # This file
-├── requirements.txt                   # Python dependencies
+├── requirements.txt                   # Python dependencies ✅
 ├── few_shot_tagger.py                # Main few-shot prompting implementation
 ├── bio_converter.py                  # BIO tagging utilities
 ├── run_part1_evaluation.py           # Complete evaluation pipeline
 ├── generate_part1_report.py          # Part 1 report generator
 ├── generate_part3_analysis.py        # Part 3 error analysis
-├── custom.bib                         # Bibliography for LaTeX report
-├── assignment_report.tex              # LaTeX academic report
+├── Instructions.txt                   # Assignment instructions
+├── deliverable_intructions.txt       # Deliverable requirements
+├── DataExploration_Summary.txt        # Data analysis summary
+├── Assignment 2.pdf                   # Assignment specification
 ├── A2-NLP_244/                       # Dataset directory
 │   ├── train.json                    # Training annotations
 │   ├── val.json                      # Validation annotations
 │   ├── file_contents.json            # Text content mapping
 │   └── unannotated_mmds/             # Unannotated MMD files
-├── outputs/                          # Generated results
-│   ├── part1_validation_results.json
-│   ├── part1_unannotated_predictions.json
-│   ├── Part1_Report.md
-│   └── Part3_ErrorAnalysis.md
-└── logs/                             # Execution logs
+├── Part1_Report.md                   # Generated Part 1 report
+├── Part3_ErrorAnalysis.md            # Generated error analysis
+├── part1_validation_results.json     # Generated validation results
+├── part1_unannotated_predictions.json # Generated predictions
+├── data_exploration.py               # Data analysis script
+├── debug_baseline.py                 # Debugging utilities
+├── evaluator.py                      # Evaluation utilities
+├── prompt_designer.py                # Prompt development tools
+└── __pycache__/                      # Python cache directory
 ```
+
+**Note**: The LaTeX academic report is maintained separately and contains the formal writeup of this research.
 
 ## 🔧 Troubleshooting
 
@@ -302,14 +309,14 @@ chmod +r A2-NLP_244/*.json
 python -c "
 from few_shot_tagger import FewShotMathTagger
 from bio_converter import convert_spans_to_bio
-print('✅ All imports successful')
+print('All imports successful')
 "
 
 # Test model loading (requires GPU/significant RAM)
 python -c "
 from few_shot_tagger import FewShotMathTagger
 tagger = FewShotMathTagger()
-print('✅ Model loaded successfully')
+print('Model loaded successfully')
 "
 ```
 
@@ -321,8 +328,8 @@ python -c "
 import json
 import pandas as pd
 val_df = pd.read_json('A2-NLP_244/val.json')
-print(f'✅ Validation set: {len(val_df)} annotations')
-print(f'✅ Unique files: {val_df[\"fileid\"].nunique()}')
+print(f'Validation set: {len(val_df)} annotations')
+print(f'Unique files: {val_df[\"fileid\"].nunique()}')
 "
 ```
 
