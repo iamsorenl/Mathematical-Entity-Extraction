@@ -29,7 +29,7 @@ class FewShotMathTagger:
                 device_map="auto",
                 torch_dtype="auto"
             )
-            print(f"✅ Successfully loaded: {model_name}")
+            print(f"Successfully loaded: {model_name}")
         except Exception as e:
             print(f"Failed to load {model_name}: {e}")
             print("Falling back to rule-based system")
@@ -165,8 +165,8 @@ Output:<|eot_id|><|start_header_id|>assistant<|end_header_id|>
             return tokens, all_pred_tags[:len(tokens)]
             
         except Exception as e:
-            print(f"  ❌ Batch processing failed: {e}")
-            print("  🔧 Falling back to sequential processing...")
+            print(f"  Batch processing failed: {e}")
+            print("  Falling back to sequential processing...")
             return self.predict_tags_chunked_sequential(text, tokens)
 
     def predict_tags_chunked_sequential(self, text, tokens):
@@ -237,49 +237,49 @@ Output:<|eot_id|><|start_header_id|>assistant<|end_header_id|>
         
         if len(text) > max_chars:
             text = text[:max_chars]
-            print(f"    📏 Truncated to {max_chars:,} chars")
+            print(f"    Truncated to {max_chars:,} chars")
         
         # Step 1: Tokenization
-        print(f"    🔤 Tokenizing {len(text):,} chars...")
+        print(f"    Tokenizing {len(text):,} chars...")
         start_time = time.time()
         tokens = tokenize_mathematical_text(text)
         elapsed = time.time() - start_time
-        print(f"    ✅ Tokenized to {len(tokens):,} tokens in {elapsed:.1f}s")
+        print(f"    Tokenized to {len(tokens):,} tokens in {elapsed:.1f}s")
         
         # Step 2: Check if we should use LLM
         if self.use_llm and len(tokens) < 2000:  # Only use LLM for reasonable sizes
-            print(f"    🤖 Trying LLM inference...")
+            print(f"    Trying LLM inference...")
             start_time = time.time()
             
             try:
                 # Create prompt
                 prompt = self.create_prompt(text)
-                print(f"    📝 Created prompt: {len(prompt):,} chars")
+                print(f"    Created prompt: {len(prompt):,} chars")
                 
                 # LLM inference with monitoring
-                print(f"    ⚡ Running Llama inference...")
+                print(f"    Running Llama inference...")
                 response = self.pipe(prompt, max_new_tokens=300)[0]['generated_text']
                 
                 elapsed = time.time() - start_time
-                print(f"    ✅ LLM completed in {elapsed:.1f}s")
+                print(f"    LLM completed in {elapsed:.1f}s")
                 
                 # Parse response
                 tags = self.parse_bio_output(response)
                 if len(tags) == len(tokens):
-                    print(f"    🎯 LLM tags aligned perfectly")
+                    print(f"    LLM tags aligned perfectly")
                     return tokens, tags
                 else:
-                    print(f"    ⚠️ LLM tag mismatch: {len(tags)} vs {len(tokens)}")
+                    print(f"    LLM tag mismatch: {len(tags)} vs {len(tokens)}")
             
             except Exception as e:
                 elapsed = time.time() - start_time
-                print(f"    ❌ LLM failed after {elapsed:.1f}s: {e}")
+                print(f"    LLM failed after {elapsed:.1f}s: {e}")
         
         # Step 3: Rule-based fallback
         print(f"    🔧 Using rule-based fallback...")
         start_time = time.time()
         tags = self.enhanced_rule_based_tagger(tokens)
         elapsed = time.time() - start_time
-        print(f"    ✅ Rule-based completed in {elapsed:.1f}s")
+        print(f"    Rule-based completed in {elapsed:.1f}s")
         
         return tokens, tags

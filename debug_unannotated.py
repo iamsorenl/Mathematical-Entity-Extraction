@@ -32,7 +32,7 @@ def test_single_file():
     tokens, tags = tagger.predict_tags(tiny_text)
     elapsed = time.time() - start_time
     
-    print(f"✅ Completed in {elapsed:.1f}s")
+    print(f"Completed in {elapsed:.1f}s")
     print(f"Tokens: {len(tokens)}")
     print(f"Non-O tags: {len([t for t in tags if t != 'O'])}")
     
@@ -44,7 +44,7 @@ def test_single_file():
         tokens, tags = tagger.predict_tags(larger_text)
         elapsed = time.time() - start_time
         
-        print(f"✅ Completed in {elapsed:.1f}s")
+        print(f"Completed in {elapsed:.1f}s")
         print(f"Tokens: {len(tokens)}")
         print(f"Non-O tags: {len([t for t in tags if t != 'O'])}")
 

@@ -32,7 +32,7 @@ def run_with_timeout(func, timeout_seconds=300):  # 5 minute timeout
         signal.alarm(0)  # Cancel timeout
         return result
     except TimeoutError:
-        print(f"⏰ TIMEOUT after {timeout_seconds}s - Model is hanging!")
+        print(f"TIMEOUT after {timeout_seconds}s - Model is hanging!")
         signal.alarm(0)
         return None
 
@@ -188,11 +188,11 @@ def run_inference_on_unannotated():
         return
     
     # Main progress bar for files
-    file_pbar = tqdm(mmd_files, desc="📁 Processing MMD files", unit="file")
+    file_pbar = tqdm(mmd_files, desc="Processing MMD files", unit="file")
     
     for file_idx, mmd_file in enumerate(file_pbar):
         # Update file progress description
-        file_pbar.set_description(f"📁 Processing file {file_idx+1}/{len(mmd_files)}")
+        file_pbar.set_description(f"Processing file {file_idx+1}/{len(mmd_files)}")
         print(f"\nProcessing {mmd_file.name}...")
         
         # Step 1: File loading
@@ -210,7 +210,7 @@ def run_inference_on_unannotated():
             print(f"  File size OK: {original_length:,} chars")
         
         # Step 3: Model inference with progressive testing
-        print("  🤖 Running model inference...")
+        print("  Running model inference...")
 
         # Test with progressively larger chunks
         test_sizes = [1000, 5000, 10000, 25000, 50000]
@@ -218,7 +218,7 @@ def run_inference_on_unannotated():
 
         for test_size in test_sizes:
             if len(text) > test_size:
-                print(f"    🧪 Testing with {test_size:,} chars...")
+                print(f"    Testing with {test_size:,} chars...")
                 test_text = text[:test_size]
                 
                 start_time = time.time()
@@ -232,10 +232,10 @@ def run_inference_on_unannotated():
                 if result is not None:
                     test_tokens, test_tags = result
                     elapsed = time.time() - start_time
-                    print(f"    ✅ {test_size:,} chars completed in {elapsed:.1f}s")
+                    print(f"    {test_size:,} chars completed in {elapsed:.1f}s")
                     successful_size = test_size
                 else:
-                    print(f"    ❌ {test_size:,} chars TIMED OUT - using {successful_size:,}")
+                    print(f"    {test_size:,} chars TIMED OUT - using {successful_size:,}")
                     break
             else:
                 successful_size = len(text)
@@ -244,7 +244,7 @@ def run_inference_on_unannotated():
         # Use the largest successful size
         if successful_size > 0:
             final_text = text[:successful_size]
-            print(f"  📏 Using {successful_size:,} chars (truncated from {len(text):,})")
+            print(f"  Using {successful_size:,} chars (truncated from {len(text):,})")
             
             def final_inference():
                 return tagger.predict_tags(final_text)
@@ -255,13 +255,13 @@ def run_inference_on_unannotated():
                 tokens, pred_tags = result
                 text = final_text  # Update text for position finding
             else:
-                print("  🚨 FINAL INFERENCE FAILED - Using rule-based fallback")
+                print("  FINAL INFERENCE FAILED - Using rule-based fallback")
                 # Force rule-based mode
                 from bio_converter import tokenize_mathematical_text
                 tokens = tokenize_mathematical_text(final_text)
                 pred_tags = ['O'] * len(tokens)
         else:
-            print("  💥 ALL TESTS FAILED - Skipping this file")
+            print("  ALL TESTS FAILED - Skipping this file")
             continue
         
         # Step 4: Converting to annotation format
