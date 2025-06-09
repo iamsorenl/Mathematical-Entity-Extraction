@@ -1,5 +1,6 @@
 import json
 import re
+import time
 from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
 from bio_converter import tokenize_mathematical_text
 
@@ -9,9 +10,16 @@ class FewShotMathTagger:
         self.pipe = None
         self.use_llm = True
         
+        # Silence warnings
+        import warnings
+        import logging
+        import os
+        warnings.filterwarnings('ignore')
+        logging.getLogger("transformers").setLevel(logging.ERROR)
+        os.environ["TRANSFORMERS_VERBOSITY"] = "error"
+        
         try:
             print(f"Loading {model_name}...")
-            # Llama-specific configuration
             self.pipe = pipeline(
                 "text-generation",
                 model=model_name,
@@ -99,8 +107,8 @@ Output:<|eot_id|><|start_header_id|>assistant<|end_header_id|>
         """Main prediction method with chunking for long texts"""
         tokens = tokenize_mathematical_text(text)
         
-        # Handle long texts by chunking
-        if len(text) > 1000:
+        # Handle long texts by chunking (increased threshold)
+        if len(text) > 3000:  # ← Changed from 1000 to 3000
             return self.predict_tags_chunked(text, tokens)
         
         if self.use_llm and self.pipe:
@@ -115,16 +123,63 @@ Output:<|eot_id|><|start_header_id|>assistant<|end_header_id|>
         return tokens, pred_tags
     
     def predict_tags_chunked(self, text, tokens):
-        """Handle long texts by processing in chunks"""
-        chunk_size = 800
+        """Handle long texts with efficient batch processing"""
+        chunk_size = 2000  # Smaller chunks for better GPU utilization
+        chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
+        
+        print(f"Processing {len(chunks)} chunks in batches...")
+        
+        # Batch process chunks
+        all_prompts = [self.create_prompt(chunk) for chunk in chunks]
+        
+        try:
+            # Process all prompts in one batch call
+            print("  🚀 Running batch inference...")
+            responses = self.pipe(all_prompts, max_new_tokens=300)
+            
+            all_pred_tags = []
+            for i, (chunk, response) in enumerate(zip(chunks, responses)):
+                chunk_tokens = tokenize_mathematical_text(chunk)
+                
+                # Extract assistant response
+                if isinstance(response, list):
+                    generated = response[0]['generated_text']
+                else:
+                    generated = response['generated_text']
+                
+                assistant_start = generated.rfind("<|start_header_id|>assistant<|end_header_id|>")
+                if assistant_start != -1:
+                    assistant_start += len("<|start_header_id|>assistant<|end_header_id|>")
+                    prediction = generated[assistant_start:].strip()
+                else:
+                    prediction = generated.split("Output:")[-1].strip()
+                
+                chunk_pred_tags = self.parse_bio_output(prediction)
+                
+                # Fallback to rule-based if parsing fails
+                if not chunk_pred_tags or len(chunk_pred_tags) != len(chunk_tokens):
+                    chunk_pred_tags = self.enhanced_rule_based_tagger(chunk_tokens)
+                
+                all_pred_tags.extend(chunk_pred_tags)
+            
+            return tokens, all_pred_tags[:len(tokens)]
+            
+        except Exception as e:
+            print(f"  ❌ Batch processing failed: {e}")
+            print("  🔧 Falling back to sequential processing...")
+            return self.predict_tags_chunked_sequential(text, tokens)
+
+    def predict_tags_chunked_sequential(self, text, tokens):
+        """Fallback sequential processing"""
+        chunk_size = 2000
         chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
         
         all_pred_tags = []
-        
-        for chunk in chunks:
+        for i, chunk in enumerate(chunks):
+            print(f"  Processing chunk {i+1}/{len(chunks)}...")
             chunk_tokens = tokenize_mathematical_text(chunk)
             
-            if self.use_llm and self.pipe:
+            if len(chunk) < 3000:  # Only use LLM for reasonable sizes
                 chunk_pred_tags = self.predict_tags_with_hf(chunk)
                 if not chunk_pred_tags:
                     chunk_pred_tags = self.enhanced_rule_based_tagger(chunk_tokens)
@@ -133,7 +188,6 @@ Output:<|eot_id|><|start_header_id|>assistant<|end_header_id|>
             
             all_pred_tags.extend(chunk_pred_tags)
         
-        # Ensure we return exactly the right number of tags
         return tokens, all_pred_tags[:len(tokens)]
     
     def enhanced_rule_based_tagger(self, tokens):
@@ -177,3 +231,55 @@ Output:<|eot_id|><|start_header_id|>assistant<|end_header_id|>
             tags.append(tag)
         
         return tags
+    
+    def debug_predict_tags(self, text, max_chars=50000):
+        """Debug version with detailed logging"""
+        
+        if len(text) > max_chars:
+            text = text[:max_chars]
+            print(f"    📏 Truncated to {max_chars:,} chars")
+        
+        # Step 1: Tokenization
+        print(f"    🔤 Tokenizing {len(text):,} chars...")
+        start_time = time.time()
+        tokens = tokenize_mathematical_text(text)
+        elapsed = time.time() - start_time
+        print(f"    ✅ Tokenized to {len(tokens):,} tokens in {elapsed:.1f}s")
+        
+        # Step 2: Check if we should use LLM
+        if self.use_llm and len(tokens) < 2000:  # Only use LLM for reasonable sizes
+            print(f"    🤖 Trying LLM inference...")
+            start_time = time.time()
+            
+            try:
+                # Create prompt
+                prompt = self.create_prompt(text)
+                print(f"    📝 Created prompt: {len(prompt):,} chars")
+                
+                # LLM inference with monitoring
+                print(f"    ⚡ Running Llama inference...")
+                response = self.pipe(prompt, max_new_tokens=300)[0]['generated_text']
+                
+                elapsed = time.time() - start_time
+                print(f"    ✅ LLM completed in {elapsed:.1f}s")
+                
+                # Parse response
+                tags = self.parse_bio_output(response)
+                if len(tags) == len(tokens):
+                    print(f"    🎯 LLM tags aligned perfectly")
+                    return tokens, tags
+                else:
+                    print(f"    ⚠️ LLM tag mismatch: {len(tags)} vs {len(tokens)}")
+            
+            except Exception as e:
+                elapsed = time.time() - start_time
+                print(f"    ❌ LLM failed after {elapsed:.1f}s: {e}")
+        
+        # Step 3: Rule-based fallback
+        print(f"    🔧 Using rule-based fallback...")
+        start_time = time.time()
+        tags = self.enhanced_rule_based_tagger(tokens)
+        elapsed = time.time() - start_time
+        print(f"    ✅ Rule-based completed in {elapsed:.1f}s")
+        
+        return tokens, tags

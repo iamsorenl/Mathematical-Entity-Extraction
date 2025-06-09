@@ -1,101 +1,73 @@
 # Mathematical Entity Extraction
 
-A comprehensive system for extracting mathematical entities (definitions, theorems, proofs, examples, names, and references) from mathematical textbook content using few-shot prompting with Llama-3.1-8B-Instruct.
+A system for extracting mathematical entities (definitions, theorems, proofs, examples, names, and references) from mathematical textbook content using few-shot prompting with Llama-3.1-8B-Instruct.
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Usage](#usage)
-- [Results](#results)
-- [Project Structure](#project-structure)
-- [Troubleshooting](#troubleshooting)
-- [Citation](#citation)
+* [Overview](#overview)
+* [Features](#features)
+* [Installation](#installation)
+* [Quick Start](#quick-start)
+* [Usage](#usage)
+* [Results](#results)
+* [Project Structure](#project-structure)
+* [Troubleshooting](#troubleshooting)
+* [Reproducing Results](#reproducing-results)
+* [Deliverables Status](#deliverables-status)
 
 ## Overview
 
 This project implements a baseline system for mathematical entity extraction using:
-- **Few-shot prompting** with Meta's Llama-3.1-8B-Instruct
-- **BIO tagging** with multi-label support
-- **Rule-based fallback** for robustness
-- **Mathematical notation handling** for LaTeX expressions
 
-The system achieves **F1: 0.203** on validation data with **precision: 0.381** and **recall: 0.300**.
+* **Few-shot prompting** with Meta's Llama-3.1-8B-Instruct
+* **BIO tagging** with multi-label support
+* **Rule-based fallback** for robustness
+* **Mathematical notation handling** for LaTeX expressions
 
 ## Features
 
-- **Few-shot prompting** with 6 carefully crafted examples
-- **Multi-label BIO tagging** (e.g., tokens can be both "definition" and "name")
-- **LaTeX-aware tokenization** preserving mathematical expressions
-- **Rule-based fallback** for cases when LLM fails
-- **Comprehensive evaluation** with token-level F1 scores
-- **Detailed error analysis** and improvement recommendations
+* Few-shot prompting with 6 crafted examples
+* Multi-label BIO tagging (tokens can be both "definition" and "name")
+* LaTeX-aware tokenization preserving mathematical expressions
+* Rule-based fallback for edge cases
+* Comprehensive evaluation with token-level F1 scores
+* Detailed error analysis
 
 ## Installation
 
 ### Prerequisites
 
-- **Python 3.8+**
-- **CUDA-capable GPU** (recommended, 16GB+ VRAM for Llama-3.1-8B)
-- **Git LFS** for model downloads
-- **Hugging Face account** for model access
+* Python 3.8+
+* CUDA-capable GPU (16GB+ VRAM recommended for Llama-3.1-8B)
+* Git LFS
+* Hugging Face account with Llama-3 access
 
-### Step 1: Clone the Repository
+### Setup
 
 ```bash
 git clone https://github.com/yourusername/Mathematical-Entity-Extraction.git
 cd Mathematical-Entity-Extraction
-```
 
-### Step 2: Create Python Environment
-
-```bash
-# Using conda (recommended)
+# Using conda
 conda create -n math-extraction python=3.10
 conda activate math-extraction
 
-# OR using venv
-python -m venv math-extraction
-source math-extraction/bin/activate  # Linux/Mac
-# math-extraction\Scripts\activate    # Windows
-```
-
-### Step 3: Install Dependencies
-
-```bash
+# Install dependencies
 pip install -r requirements.txt
-```
 
-### Step 4: Set Up Hugging Face CLI
-
-```bash
-# Install Hugging Face CLI (if not already included)
+# Hugging Face login
 pip install huggingface_hub
-
-# Login to Hugging Face (required for Llama access)
 huggingface-cli login
-```
 
-**Note**: You'll need to:
-1. Create a Hugging Face account at https://huggingface.co/
-2. Request access to Meta's Llama models at https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
-3. Get approval (usually instant)
-4. Use your HF token when prompted by `huggingface-cli login`
-
-### Step 5: Download NLTK Data
-
-```bash
+# Download NLTK data
 python -c "import nltk; nltk.download('punkt')"
 ```
 
 ## Quick Start
 
-### Run Complete Evaluation Pipeline
+### Run Evaluation Pipeline
 
 ```bash
-# Set GPU device (adjust as needed)
 export CUDA_VISIBLE_DEVICES=0
 
 # Run Part 1 evaluation (few-shot baseline)
@@ -108,252 +80,149 @@ python generate_part3_analysis.py
 python generate_part1_report.py
 ```
 
-### Expected Outputs
+### Outputs
 
-After running the pipeline, you'll have:
-- `part1_validation_results.json` - Validation metrics and F1 scores
-- `part1_unannotated_predictions.json` - Predictions on unannotated data
-- `Part1_Report.md` - Comprehensive Part 1 report
-- `Part3_ErrorAnalysis.md` - Detailed error analysis
+* `part1_validation_results.json` — Validation metrics and F1 scores
+* `part1_unannotated_predictions.json` — Predictions on unannotated data
+* `Part1_Report.md` — Part 1 report
+* `Part3_ErrorAnalysis.md` — Error analysis
 
 ## Usage
 
-### Individual Components
-
-#### 1. Run Few-Shot Tagging on Single File
+### Run Few-Shot Tagging on Single File
 
 ```python
 from few_shot_tagger import FewShotMathTagger
 
-# Initialize tagger
 tagger = FewShotMathTagger()
 
-# Load mathematical text
 with open('your_math_file.mmd', 'r') as f:
     text = f.read()
 
-# Get predictions
 tokens, tags = tagger.predict_tags(text)
-
-# Count entities found
-entity_count = len([t for t in tags if t != 'O'])
-print(f"Found {entity_count} entities")
+print(f"Found {len([t for t in tags if t != 'O'])} entities")
 ```
 
-#### 2. Convert Annotations to BIO Format
+### Convert Annotations to BIO Format
 
 ```python
 from bio_converter import convert_spans_to_bio
 
-# Convert span annotations to BIO tags
 tokens, bio_tags = convert_spans_to_bio(text, annotations)
 ```
-
-#### 3. Evaluation Metrics
-
-```python
-from sklearn.metrics import f1_score, classification_report
-
-# Calculate F1 score
-f1 = f1_score(true_tags, pred_tags, average='weighted')
-print(f"F1 Score: {f1:.3f}")
-```
-
-### Configuration Options
-
-#### GPU Memory Management
-
-```bash
-# For smaller GPUs, try these settings:
-export CUDA_VISIBLE_DEVICES=0
-export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:512
-
-# For multiple GPUs
-export CUDA_VISIBLE_DEVICES=0,1
-```
-
-#### Model Parameters
-
-Edit `few_shot_tagger.py` to adjust:
-- **Temperature**: `temperature=0.1` (default, lower = more deterministic)
-- **Max tokens**: `max_new_tokens=1000` (adjust for longer texts)
-- **Model**: Change `model_name` to use different models
 
 ## Results
 
 ### Baseline Performance
 
-| Metric | Score |
-|--------|-------|
-| **Overall F1** | 0.203 |
-| **Precision** | 0.381 |
-| **Recall** | 0.300 |
-| **Files Processed** | 3/3 (100%) |
+| Metric          | Score |
+| --------------- | ----- |
+| Overall F1      | 0.132 |
+| Precision       | 0.352 |
+| Recall          | 0.279 |
+| Files Processed | 3/3   |
+| Total Tokens    | 1,911 |
 
 ### Per-File Results
 
-| File | Tokens | F1 Score | Notes |
-|------|--------|----------|-------|
-| Complex Manifolds | 651 | 0.350 | Good performance |
-| Number Theory | 454 | 0.015 | Severe underperformance |
-| Commutative Algebra | 347 | 0.225 | High false negatives |
+| File                | F1 Score |
+| ------------------- | -------- |
+| Complex Manifolds   | 0.320    |
+| Number Theory       | 0.033    |
+| Commutative Algebra | 0.119    |
 
-### Key Findings
+### Unannotated Data
 
-- **Conservative but accurate**: High precision (38.1%) when confident
-- **High false negative rate**: Missing 59% of true entities
-- **Domain variance**: Performance varies significantly across mathematical domains
-- **Zero unannotated predictions**: Suggests domain shift or overly strict thresholds
+* Files Processed: 3/3
+* Total Predictions: 268 entities
+* Entity Types Found: definition, theorem, proof, reference, name
 
 ## Project Structure
 
 ```
 Mathematical-Entity-Extraction/
-├── README.md                          # This file
-├── requirements.txt                   # Python dependencies ✅
-├── few_shot_tagger.py                # Main few-shot prompting implementation
-├── bio_converter.py                  # BIO tagging utilities
-├── run_part1_evaluation.py           # Complete evaluation pipeline
-├── generate_part1_report.py          # Part 1 report generator
-├── generate_part3_analysis.py        # Part 3 error analysis
-├── Instructions.txt                   # Assignment instructions
-├── deliverable_intructions.txt       # Deliverable requirements
-├── DataExploration_Summary.txt        # Data analysis summary
-├── Assignment 2.pdf                   # Assignment specification
-├── A2-NLP_244/                       # Dataset directory
-│   ├── train.json                    # Training annotations
-│   ├── val.json                      # Validation annotations
-│   ├── file_contents.json            # Text content mapping
-│   └── unannotated_mmds/             # Unannotated MMD files
-├── Part1_Report.md                   # Generated Part 1 report
-├── Part3_ErrorAnalysis.md            # Generated error analysis
-├── part1_validation_results.json     # Generated validation results
-├── part1_unannotated_predictions.json # Generated predictions
-├── data_exploration.py               # Data analysis script
-├── debug_baseline.py                 # Debugging utilities
-├── evaluator.py                      # Evaluation utilities
-├── prompt_designer.py                # Prompt development tools
-└── __pycache__/                      # Python cache directory
+├── README.md
+├── requirements.txt
+├── few_shot_tagger.py
+├── bio_converter.py
+├── run_part1_evaluation.py
+├── generate_part1_report.py
+├── generate_part3_analysis.py
+├── DataExploration_Summary.txt
+├── Assignment 2.pdf
+├── A2-NLP_244/
+│   ├── train.json
+│   ├── val.json
+│   ├── test.txt
+│   ├── val.txt
+│   ├── math-atlas-paper.pdf
+│   ├── file_contents.json
+│   └── unannotated_mmds/
+│       ├── (mmd) Algebra - Lang.mmd.filtered
+│       ├── (mmd) Categorical Homotopy Theory - Riehl.mmd.filtered
+│       ├── (mmd) Course of Analytical Geometry - Sharipov.mmd.filtered
+├── Part1_Report.md
+├── Part3_ErrorAnalysis.md
+├── part1_validation_results.json
+├── part1_unannotated_predictions.json
+├── data_exploration.py
+├── debug_baseline.py
+├── debug_unannotated.py
+├── evaluator.py
+├── prompt_designer.py
+├── .gitignore
 ```
 
-**Note**: The LaTeX academic report is maintained separately and contains the formal writeup of this research.
+## Troubleshooting
 
-## 🔧 Troubleshooting
-
-### Common Issues
-
-#### 1. CUDA Out of Memory
+### CUDA Out of Memory
 
 ```bash
-# Reduce batch size or use smaller model
-export CUDA_VISIBLE_DEVICES=0
 export PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:512
-
-# Consider using Llama-3.1-1B instead:
-# Edit few_shot_tagger.py: model_name = "meta-llama/Llama-3.1-1B-Instruct"
+# Or use Llama-3.1-1B in few_shot_tagger.py
 ```
 
-#### 2. Hugging Face Authentication
+### Hugging Face Authentication
 
 ```bash
-# Re-login to Hugging Face
-huggingface-cli logout
 huggingface-cli login
-
-# Verify access to Llama models
-python -c "from transformers import AutoTokenizer; AutoTokenizer.from_pretrained('meta-llama/Llama-3.1-8B-Instruct')"
 ```
 
-#### 3. NLTK Download Issues
+### NLTK Download Issues
 
 ```bash
-# Manual NLTK data download
-python -c "
-import nltk
-nltk.download('punkt')
-nltk.download('punkt_tab')
-"
+python -c "import nltk; nltk.download('punkt')"
 ```
 
-#### 4. Permission Errors on Dataset
+## Reproducing Results
 
-```bash
-# Check file permissions
-ls -la A2-NLP_244/
-chmod +r A2-NLP_244/*.json
-```
+1. Install exact environment:
 
-### Performance Optimization
-
-#### For Faster Development/Testing
-
-1. **Limit files processed**: Edit `run_part1_evaluation.py` line 103
-   ```python
-   if processed_files >= 2:  # Process only 2 files for testing
-       break
-   ```
-
-2. **Use smaller model**: In `few_shot_tagger.py`
-   ```python
-   model_name = "meta-llama/Llama-3.1-1B-Instruct"  # Faster, less memory
-   ```
-
-3. **CPU-only mode**: Set `device="cpu"` in `few_shot_tagger.py`
-
-### Validation
-
-#### Verify Installation
-
-```bash
-# Test core components
-python -c "
-from few_shot_tagger import FewShotMathTagger
-from bio_converter import convert_spans_to_bio
-print('All imports successful')
-"
-
-# Test model loading (requires GPU/significant RAM)
-python -c "
-from few_shot_tagger import FewShotMathTagger
-tagger = FewShotMathTagger()
-print('Model loaded successfully')
-"
-```
-
-#### Check Dataset
-
-```bash
-# Verify dataset structure
-python -c "
-import json
-import pandas as pd
-val_df = pd.read_json('A2-NLP_244/val.json')
-print(f'Validation set: {len(val_df)} annotations')
-print(f'Unique files: {val_df[\"fileid\"].nunique()}')
-"
-```
-
-## 🎯 Reproducing Results
-
-To exactly reproduce the reported results:
-
-1. **Use the exact environment**:
    ```bash
-   pip install -r requirements.txt  # Exact versions
+   pip install -r requirements.txt
    ```
 
-2. **Set random seeds** (already configured in code):
+2. Set random seeds and config:
+
    ```python
-   temperature=0.1  # Deterministic generation
+   temperature=0.1  # In few_shot_tagger.py
    ```
 
-3. **Use same GPU setup**:
-   ```bash
-   export CUDA_VISIBLE_DEVICES=0  # Single GPU
-   ```
+3. Run pipeline:
 
-4. **Run complete pipeline**:
    ```bash
    python run_part1_evaluation.py
    python generate_part3_analysis.py
    ```
+
+## Deliverables Status
+
+| Deliverable                                                    | Status     |
+| -------------------------------------------------------------- | ---------- |
+| Source Code                                                    | ✅ Complete |
+| Part 1 Report (`Part1_Report.md`)                              | ✅ Complete |
+| Part 3 Error Analysis (`Part3_ErrorAnalysis.md`)               | ✅ Complete |
+| Validation Results (`part1_validation_results.json`)           | ✅ Complete |
+| Unannotated Predictions (`part1_unannotated_predictions.json`) | ✅ Complete |
+
+---

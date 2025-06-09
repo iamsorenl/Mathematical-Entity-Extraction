@@ -19,29 +19,29 @@
 ## Validation Scores
 
 ### Overall Performance
-- **Overall F1 Score**: 0.203
-- **Precision**: 0.381  
-- **Recall**: 0.300
+- **Overall F1 Score**: 0.132
+- **Precision**: 0.352  
+- **Recall**: 0.279
 - **Files Processed**: 3
-- **Total Tokens**: 1,452
+- **Total Tokens**: 1,911
 
 ### Per-File Results
 | File | Tokens | F1 Score |
 |------|--------|----------|
-| (mmd) Complex Manifolds - Differential Analysis on... | 651 | 0.350 |
-| (mmd) Number Theory - Number Theory - An Introduct... | 454 | 0.015 |
-| (mmd) A Term of Commutative Algebra - Altman.mmd-v... | 347 | 0.225 |
+| (mmd) Complex Manifolds - Differential Analysis on... | 651 | 0.320 |
+| (mmd) Number Theory - Number Theory - An Introduct... | 769 | 0.033 |
+| (mmd) A Term of Commutative Algebra - Altman.mmd-v... | 491 | 0.119 |
 
 ## Inference Results on Unannotated Data
 
 ### Summary Statistics
-- **Files Processed**: 0
-- **Total Predictions**: 0
-- **Unique Tags Found**: 0
-- **Tag Distribution**: No predictions made
+- **Files Processed**: 3
+- **Total Predictions**: 268
+- **Unique Tags Found**: 5
+- **Tag Distribution**: definition, reference, theorem, name, proof
 
 ### Notes on Low Prediction Count
-The current model produced 0 predictions on unannotated files. This suggests:
+The current model produced 268 predictions on unannotated files. This suggests:
 1. Conservative prediction threshold (rule-based fallback may be too strict)
 2. Domain shift between validation and unannotated data
 3. Potential need for prompt engineering improvements
@@ -96,4 +96,4 @@ print(f"Found {len([t for t in tags if t != 'O'])} entities")
 4. **Domain Adaptation**: May need fine-tuning for specific mathematical domains
 
 ---
-*Generated on 2025-06-08 19:32:17*
+*Generated on 2025-06-09 01:37:13*

@@ -1,3 +1,1878 @@
 [
-
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":526,
+    "end":537,
+    "tag":"definition",
+    "text":"definitions"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":1000,
+    "end":1010,
+    "tag":"definition",
+    "text":"Definition"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":1371,
+    "end":1378,
+    "tag":"definition",
+    "text":"defined"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":2099,
+    "end":2102,
+    "tag":"reference",
+    "text":"and"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":2609,
+    "end":2614,
+    "tag":"reference",
+    "text":"Thus,"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":2907,
+    "end":2916,
+    "tag":"theorem",
+    "text":"8.2.1**.:"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":3794,
+    "end":3803,
+    "tag":"theorem",
+    "text":"8.2.2**.:"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":4611,
+    "end":4618,
+    "tag":"definition",
+    "text":"Theorem"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":4863,
+    "end":4870,
+    "tag":"definition",
+    "text":"exactly"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":4890,
+    "end":4896,
+    "tag":"reference",
+    "text":"tensor"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":4919,
+    "end":4924,
+    "tag":"reference",
+    "text":"Under"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":5447,
+    "end":5456,
+    "tag":"reference",
+    "text":"cotensors"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":5461,
+    "end":5463,
+    "tag":"reference",
+    "text":"be"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":5963,
+    "end":5971,
+    "tag":"definition",
+    "text":"homotopy"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":6258,
+    "end":6273,
+    "tag":"theorem",
+    "text":"\\(\\mathcal{D}\\)"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":6916,
+    "end":6925,
+    "tag":"definition",
+    "text":"8.3.2**.:"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":6928,
+    "end":6935,
+    "tag":"definition",
+    "text":"functor"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":6997,
+    "end":7004,
+    "tag":"theorem",
+    "text":"functor"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":7043,
+    "end":7046,
+    "tag":"definition",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":10310,
+    "end":10325,
+    "tag":"theorem",
+    "text":"\\(\\mathcal{D}\\)"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":10576,
+    "end":10578,
+    "tag":"definition",
+    "text":"._"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":10636,
+    "end":10639,
+    "tag":"definition",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":10677,
+    "end":10679,
+    "tag":"theorem",
+    "text":"is"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":10807,
+    "end":10810,
+    "tag":"reference",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":12256,
+    "end":12258,
+    "tag":"definition",
+    "text":"we"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":15999,
+    "end":16009,
+    "tag":"definition",
+    "text":"**homotopy"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":16220,
+    "end":16230,
+    "tag":"definition",
+    "text":"associated"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":17720,
+    "end":17724,
+    "tag":"theorem",
+    "text":"with"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":17788,
+    "end":17790,
+    "tag":"definition",
+    "text":"of"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":18510,
+    "end":18519,
+    "tag":"definition",
+    "text":"geometric"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":18732,
+    "end":18734,
+    "tag":"theorem",
+    "text":"is"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":20355,
+    "end":20362,
+    "tag":"definition",
+    "text":"follows"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":20951,
+    "end":20962,
+    "tag":"definition",
+    "text":"finality).:"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":20979,
+    "end":20980,
+    "tag":"theorem",
+    "text":"a"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":20989,
+    "end":20991,
+    "tag":"definition",
+    "text":"to"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":22311,
+    "end":22320,
+    "tag":"definition",
+    "text":"cofibrant"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":22895,
+    "end":22899,
+    "tag":"theorem",
+    "text":"then"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":23910,
+    "end":23915,
+    "tag":"reference",
+    "text":"arrow"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":25493,
+    "end":25521,
+    "tag":"definition",
+    "text":"\\(S\\alpha\\colon[k+1]\\to[n]\\)"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":25699,
+    "end":25703,
+    "tag":"definition",
+    "text":"maps"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":25899,
+    "end":25914,
+    "tag":"definition",
+    "text":"transformations"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":25972,
+    "end":25973,
+    "tag":"definition",
+    "text":","
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":26705,
+    "end":26712,
+    "tag":"reference",
+    "text":"Example"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":26825,
+    "end":26827,
+    "tag":"definition",
+    "text":"to"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":27635,
+    "end":27652,
+    "tag":"definition",
+    "text":"0}}{{\\to}}[q])\\)."
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":27872,
+    "end":27878,
+    "tag":"definition",
+    "text":"object"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":30419,
+    "end":30427,
+    "tag":"definition",
+    "text":"functor,"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":30557,
+    "end":30560,
+    "tag":"reference",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":30735,
+    "end":30742,
+    "tag":"reference",
+    "text":"version"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":30917,
+    "end":30923,
+    "tag":"reference",
+    "text":"enjoys"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":31565,
+    "end":31566,
+    "tag":"definition",
+    "text":"A"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":31639,
+    "end":31641,
+    "tag":"reference",
+    "text":"to"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":32122,
+    "end":32132,
+    "tag":"definition",
+    "text":"difference"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":32144,
+    "end":32147,
+    "tag":"reference",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":32349,
+    "end":32352,
+    "tag":"reference",
+    "text":"bar"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":32405,
+    "end":32414,
+    "tag":"definition",
+    "text":"-functors"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":32663,
+    "end":32675,
+    "tag":"reference",
+    "text":"construction"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":32684,
+    "end":32687,
+    "tag":"reference",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":32861,
+    "end":32870,
+    "tag":"definition",
+    "text":"-category"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":32874,
+    "end":32877,
+    "tag":"reference",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":33724,
+    "end":33762,
+    "tag":"definition",
+    "text":"B_{n-1}(G,\\underline{\\mathcal{D}},F)\\)"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":34684,
+    "end":34724,
+    "tag":"definition",
+    "text":"\\[B_{n-1}(G,\\underline{\\mathcal{D}},F)\\]"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":34995,
+    "end":35000,
+    "tag":"reference",
+    "text":"makes"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":35171,
+    "end":35175,
+    "tag":"definition",
+    "text":"that"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":35534,
+    "end":35539,
+    "tag":"definition",
+    "text":"cobar"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":35676,
+    "end":35679,
+    "tag":"reference",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":35690,
+    "end":35693,
+    "tag":"reference",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":36100,
+    "end":36107,
+    "tag":"definition",
+    "text":"induces"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":37335,
+    "end":37340,
+    "tag":"reference",
+    "text":"makes"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":37456,
+    "end":37467,
+    "tag":"definition",
+    "text":"unenriched,"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":37477,
+    "end":37479,
+    "tag":"definition",
+    "text":"in"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":37826,
+    "end":37841,
+    "tag":"definition",
+    "text":"\\(\\mathcal{V}\\)"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":37995,
+    "end":38000,
+    "tag":"definition",
+    "text":"cobar"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":38107,
+    "end":38337,
+    "tag":"definition",
+    "text":"\\[B(G,\\underline{\\mathcal{D}},F):=\\Delta^{\\bullet}\\otimes_{B\\mapsto\\mathcal{V}}B _{\\bullet}(G,\\underline{\\mathcal{D}},F)\\qquad\\qquad C(G,\\underline{\\mathcal{ D}},F):=\\{\\Delta^{\\bullet},C^{\\bullet}(G,\\mathcal{D},F)\\}^{\\mathbb{A}}\\]"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":38359,
+    "end":38362,
+    "tag":"reference",
+    "text":"and"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":38403,
+    "end":38408,
+    "tag":"reference",
+    "text":"\\(G\\)"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":38640,
+    "end":38645,
+    "tag":"definition",
+    "text":"group"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":39087,
+    "end":39090,
+    "tag":"definition",
+    "text":"The"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":39436,
+    "end":39463,
+    "tag":"reference",
+    "text":"(\\(\\mathcal{V},\\times,*\\))."
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":39464,
+    "end":39466,
+    "tag":"reference",
+    "text":"We"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":39907,
+    "end":39908,
+    "tag":"name",
+    "text":"."
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":41747,
+    "end":41760,
+    "tag":"reference",
+    "text":"construction."
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":41788,
+    "end":41800,
+    "tag":"name",
+    "text":"isomorphisms"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":42209,
+    "end":42216,
+    "tag":"name",
+    "text":"colimit"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":42249,
+    "end":42251,
+    "tag":"reference",
+    "text":"up"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":42505,
+    "end":42509,
+    "tag":"definition",
+    "text":"this"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":42523,
+    "end":42525,
+    "tag":"reference",
+    "text":"is"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":43176,
+    "end":43184,
+    "tag":"reference",
+    "text":"monoidal"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":43875,
+    "end":43880,
+    "tag":"definition",
+    "text":"those"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":44043,
+    "end":44049,
+    "tag":"definition",
+    "text":"-model"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":44140,
+    "end":44142,
+    "tag":"theorem",
+    "text":"1."
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":44261,
+    "end":44264,
+    "tag":"reference",
+    "text":"of_"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":44385,
+    "end":44400,
+    "tag":"reference",
+    "text":"\\(\\mathcal{V}\\)"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":44441,
+    "end":44446,
+    "tag":"reference",
+    "text":"_into"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":44453,
+    "end":44460,
+    "tag":"reference",
+    "text":"fibrant"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":45742,
+    "end":45753,
+    "tag":"theorem",
+    "text":"hom-objects"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":46873,
+    "end":46880,
+    "tag":"name",
+    "text":"second_"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":47090,
+    "end":47100,
+    "tag":"name",
+    "text":"diagrams._"
+  },
+  {
+    "fileid":"(mmd) Categorical Homotopy Theory - Riehl.mmd.filtered",
+    "start":47245,
+    "end":47248,
+    "tag":"definition",
+    "text":"are"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":328,
+    "end":335,
+    "tag":"definition",
+    "text":"defines"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":1477,
+    "end":1486,
+    "tag":"theorem",
+    "text":"**Theorem"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":1709,
+    "end":1711,
+    "tag":"definition",
+    "text":"is"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":2320,
+    "end":2328,
+    "tag":"definition",
+    "text":"27.1**.:"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":2488,
+    "end":2492,
+    "tag":"definition",
+    "text":"3.2,"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":2508,
+    "end":2512,
+    "tag":"definition",
+    "text":"27.1"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":2620,
+    "end":2623,
+    "tag":"definition",
+    "text":"3.2"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":2644,
+    "end":2648,
+    "tag":"definition",
+    "text":"27.1"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":2695,
+    "end":2707,
+    "tag":"definition",
+    "text":"**Definition"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":2708,
+    "end":2716,
+    "tag":"definition",
+    "text":"27.2**.:"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":2973,
+    "end":2978,
+    "tag":"definition",
+    "text":"27.2,"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":3283,
+    "end":3303,
+    "tag":"reference",
+    "text":"\\(\\pi_{\\mathbf{a}}\\)"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":3417,
+    "end":3425,
+    "tag":"definition",
+    "text":"27.3**.:"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":3438,
+    "end":3458,
+    "tag":"reference",
+    "text":"\\(\\pi_{\\mathbf{a}}\\)"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":3961,
+    "end":3969,
+    "tag":"theorem",
+    "text":"27.2**.:"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":5643,
+    "end":5645,
+    "tag":"definition",
+    "text":"In"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":6138,
+    "end":6145,
+    "tag":"definition",
+    "text":"mapping"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":6159,
+    "end":6163,
+    "tag":"reference",
+    "text":"from"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":6258,
+    "end":6267,
+    "tag":"reference",
+    "text":"possesses"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":6469,
+    "end":6472,
+    "tag":"theorem",
+    "text":"any"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":6480,
+    "end":6482,
+    "tag":"reference",
+    "text":"to"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":6527,
+    "end":6530,
+    "tag":"theorem",
+    "text":"any"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":6805,
+    "end":6810,
+    "tag":"definition",
+    "text":"prove"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":6904,
+    "end":6906,
+    "tag":"definition",
+    "text":"to"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":7163,
+    "end":7168,
+    "tag":"reference",
+    "text":"first"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":7184,
+    "end":7187,
+    "tag":"name",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":11247,
+    "end":11252,
+    "tag":"definition",
+    "text":"above"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":11319,
+    "end":11321,
+    "tag":"reference",
+    "text":"as"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":12136,
+    "end":12224,
+    "tag":"name",
+    "text":"\\[{\\bf e}=\\alpha{\\bf b}=\\alpha\\,{\\bf b}_{\\parallel}+\\alpha{\\bf b}_{\\perp}. \\tag{27.22}\\]"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":12777,
+    "end":12785,
+    "tag":"definition",
+    "text":"equality"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":13681,
+    "end":13691,
+    "tag":"definition",
+    "text":"Otherwise,"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":13992,
+    "end":13995,
+    "tag":"name",
+    "text":"are"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":14028,
+    "end":14038,
+    "tag":"definition",
+    "text":"properties"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":14968,
+    "end":14973,
+    "tag":"definition",
+    "text":"basis"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":15704,
+    "end":15711,
+    "tag":"definition",
+    "text":"basis_."
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":16265,
+    "end":16269,
+    "tag":"name",
+    "text":"that"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":17646,
+    "end":17664,
+    "tag":"definition",
+    "text":"\\(\\mathbf{e}_{3}\\)"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":18670,
+    "end":18682,
+    "tag":"definition",
+    "text":"skew-angular"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":19353,
+    "end":19356,
+    "tag":"definition",
+    "text":"-th"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":19393,
+    "end":19396,
+    "tag":"definition",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":19426,
+    "end":19429,
+    "tag":"definition",
+    "text":"and"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":20828,
+    "end":20838,
+    "tag":"definition",
+    "text":"fulfilled:"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":20914,
+    "end":20917,
+    "tag":"theorem",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":21261,
+    "end":21271,
+    "tag":"definition",
+    "text":"equivalent"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":21279,
+    "end":21291,
+    "tag":"definition",
+    "text":"relationship"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":21405,
+    "end":21407,
+    "tag":"definition",
+    "text":"in"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":22846,
+    "end":22850,
+    "tag":"definition",
+    "text":"unit"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":23060,
+    "end":23063,
+    "tag":"definition",
+    "text":"and"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":23254,
+    "end":23255,
+    "tag":"definition",
+    "text":","
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":23703,
+    "end":23707,
+    "tag":"definition",
+    "text":"that"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":23913,
+    "end":23919,
+    "tag":"definition",
+    "text":"unity."
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":24303,
+    "end":24307,
+    "tag":"definition",
+    "text":"Gram"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":25302,
+    "end":25312,
+    "tag":"theorem",
+    "text":"constitute"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":25574,
+    "end":25576,
+    "tag":"definition",
+    "text":"of"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":25716,
+    "end":25718,
+    "tag":"definition",
+    "text":"of"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":25763,
+    "end":25765,
+    "tag":"definition",
+    "text":"of"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":25932,
+    "end":25935,
+    "tag":"definition",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":27322,
+    "end":27325,
+    "tag":"definition",
+    "text":"are"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":27675,
+    "end":27677,
+    "tag":"definition",
+    "text":"be"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":28086,
+    "end":28092,
+    "tag":"definition",
+    "text":"triple"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":28449,
+    "end":28454,
+    "tag":"definition",
+    "text":"third"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":28532,
+    "end":28534,
+    "tag":"definition",
+    "text":"is"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":28987,
+    "end":28992,
+    "tag":"definition",
+    "text":"third"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":29596,
+    "end":29610,
+    "tag":"definition",
+    "text":"\\(\\mathbf{b}\\)"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":30016,
+    "end":30050,
+    "tag":"definition",
+    "text":"\\(\\mathbf{a}\\nparallel\\mathbf{b}\\)"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":31174,
+    "end":31197,
+    "tag":"definition",
+    "text":"\\({\\bf c}\\perp{\\bf b}\\)"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":31572,
+    "end":31575,
+    "tag":"definition",
+    "text":"are"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":33663,
+    "end":33667,
+    "tag":"reference",
+    "text":"(see"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":33797,
+    "end":33810,
+    "tag":"reference",
+    "text":"perpendicular"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":33913,
+    "end":33918,
+    "tag":"definition",
+    "text":"plane"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":33933,
+    "end":33935,
+    "tag":"definition",
+    "text":"to"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":33947,
+    "end":33969,
+    "tag":"reference",
+    "text":"\\({\\bf a}\\neq{\\bf 0}\\)"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":34054,
+    "end":34060,
+    "tag":"definition",
+    "text":"vector"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":34164,
+    "end":34167,
+    "tag":"definition",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":34387,
+    "end":34389,
+    "tag":"definition",
+    "text":"is"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":34480,
+    "end":34481,
+    "tag":"reference",
+    "text":"."
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":35324,
+    "end":35329,
+    "tag":"proof",
+    "text":"First"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":36155,
+    "end":36163,
+    "tag":"reference",
+    "text":"identity"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":36192,
+    "end":36198,
+    "tag":"reference",
+    "text":"(36.6)"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":36536,
+    "end":36540,
+    "tag":"name",
+    "text":"from"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":36779,
+    "end":36788,
+    "tag":"definition",
+    "text":"arbitrary"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":36812,
+    "end":36815,
+    "tag":"reference",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":37302,
+    "end":37308,
+    "tag":"definition",
+    "text":"37.1)."
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":37733,
+    "end":37735,
+    "tag":"definition",
+    "text":"e."
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":37793,
+    "end":37794,
+    "tag":"definition",
+    "text":","
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":37905,
+    "end":37907,
+    "tag":"reference",
+    "text":"at"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":38906,
+    "end":38914,
+    "tag":"definition",
+    "text":"produced"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":39256,
+    "end":39258,
+    "tag":"reference",
+    "text":"of"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":39280,
+    "end":39313,
+    "tag":"reference",
+    "text":"\\(\\theta_{\\mathbf{a}}^{\\varphi}\\)"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":39493,
+    "end":39494,
+    "tag":"definition",
+    "text":"."
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":39756,
+    "end":39765,
+    "tag":"reference",
+    "text":"Rotations"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":39792,
+    "end":39794,
+    "tag":"reference",
+    "text":"be"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":39835,
+    "end":39841,
+    "tag":"definition",
+    "text":"length"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":41291,
+    "end":41298,
+    "tag":"reference",
+    "text":"vectors"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":41361,
+    "end":41364,
+    "tag":"reference",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":42666,
+    "end":42673,
+    "tag":"reference",
+    "text":"formula"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":44595,
+    "end":44606,
+    "tag":"definition",
+    "text":"condition_."
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":44969,
+    "end":44977,
+    "tag":"definition",
+    "text":"provided"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":45053,
+    "end":45054,
+    "tag":"definition",
+    "text":","
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":45066,
+    "end":45069,
+    "tag":"name",
+    "text":"for"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":45093,
+    "end":45096,
+    "tag":"name",
+    "text":"for"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":47128,
+    "end":47137,
+    "tag":"name",
+    "text":"trivially"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":47175,
+    "end":47178,
+    "tag":"definition",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":47960,
+    "end":47969,
+    "tag":"definition",
+    "text":"following"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":48485,
+    "end":48493,
+    "tag":"definition",
+    "text":"applying"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":49038,
+    "end":49042,
+    "tag":"name",
+    "text":"this"
+  },
+  {
+    "fileid":"(mmd) Course of Analytical Geometry - Sharipov.mmd.filtered",
+    "start":49644,
+    "end":49655,
+    "tag":"name",
+    "text":"expansions,"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":2225,
+    "end":2231,
+    "tag":"theorem",
+    "text":"4.1.**"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":2515,
+    "end":2521,
+    "tag":"theorem",
+    "text":"4.2.**"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":2592,
+    "end":2594,
+    "tag":"proof",
+    "text":"If"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":4138,
+    "end":4139,
+    "tag":"theorem",
+    "text":"*"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":4648,
+    "end":4653,
+    "tag":"reference",
+    "text":"onto_"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":5299,
+    "end":5304,
+    "tag":"proof",
+    "text":"leave"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":7978,
+    "end":7984,
+    "tag":"reference",
+    "text":"Groups"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":8436,
+    "end":8438,
+    "tag":"reference",
+    "text":"by"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":8748,
+    "end":8766,
+    "tag":"definition",
+    "text":"\\(G\\times S\\to S\\)"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":8782,
+    "end":8787,
+    "tag":"reference",
+    "text":"above"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":8970,
+    "end":8971,
+    "tag":"definition",
+    "text":":"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":9203,
+    "end":9208,
+    "tag":"definition",
+    "text":"\\(G\\)"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":11746,
+    "end":11752,
+    "tag":"reference",
+    "text":"reader"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":11760,
+    "end":11761,
+    "tag":"reference",
+    "text":"a"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":12005,
+    "end":12010,
+    "tag":"definition",
+    "text":"\\(G\\)"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":12032,
+    "end":12037,
+    "tag":"definition",
+    "text":"\\(G\\)"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":13876,
+    "end":13878,
+    "tag":"definition",
+    "text":"##"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":13940,
+    "end":13942,
+    "tag":"reference",
+    "text":"it"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":14742,
+    "end":14751,
+    "tag":"theorem",
+    "text":"operating"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":14828,
+    "end":14830,
+    "tag":"theorem",
+    "text":"to"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":14835,
+    "end":14837,
+    "tag":"proof",
+    "text":"in"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":14854,
+    "end":14855,
+    "tag":"definition",
+    "text":"."
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":19452,
+    "end":19462,
+    "tag":"definition",
+    "text":"\\(\\sigma\\)"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":21314,
+    "end":21414,
+    "tag":"definition",
+    "text":"\\[\\pi(\\sigma)\\pi(\\tau)f(x_{1},\\ldots,\\,x_{n}) = (\\pi(\\tau)f)(x_{\\sigma(1)},\\ldots,\\,x_{\\sigma(n)})\\]"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":22037,
+    "end":22041,
+    "tag":"theorem",
+    "text":"such"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":22047,
+    "end":22050,
+    "tag":"proof",
+    "text":"for"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":23686,
+    "end":23691,
+    "tag":"theorem",
+    "text":"shall"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":23729,
+    "end":23732,
+    "tag":"proof",
+    "text":"two"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":24885,
+    "end":24890,
+    "tag":"definition",
+    "text":"write"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":25430,
+    "end":25434,
+    "tag":"proof",
+    "text":"have"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":25717,
+    "end":25719,
+    "tag":"proof",
+    "text":"we"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":26583,
+    "end":26588,
+    "tag":"theorem",
+    "text":"\\(N\\)"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":26639,
+    "end":26644,
+    "tag":"proof",
+    "text":"prove"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":28125,
+    "end":28128,
+    "tag":"theorem",
+    "text":"let"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":28159,
+    "end":28162,
+    "tag":"proof",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":29012,
+    "end":29017,
+    "tag":"proof",
+    "text":"\\(H\\)"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":31382,
+    "end":31387,
+    "tag":"definition",
+    "text":"hence"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":31844,
+    "end":31846,
+    "tag":"theorem",
+    "text":"If"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":31866,
+    "end":31867,
+    "tag":"proof",
+    "text":","
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":32508,
+    "end":32513,
+    "tag":"theorem",
+    "text":"\\(1\\)"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":32781,
+    "end":32787,
+    "tag":"proof",
+    "text":"center"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":33291,
+    "end":33296,
+    "tag":"theorem",
+    "text":"prime"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":33467,
+    "end":33469,
+    "tag":"proof",
+    "text":"If"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":33671,
+    "end":33676,
+    "tag":"theorem",
+    "text":"group"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":33744,
+    "end":33748,
+    "tag":"proof",
+    "text":"Then"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":33840,
+    "end":33842,
+    "tag":"proof",
+    "text":"by"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":35704,
+    "end":35714,
+    "tag":"definition",
+    "text":"consisting"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":35842,
+    "end":35843,
+    "tag":"theorem",
+    "text":"."
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":35889,
+    "end":35892,
+    "tag":"proof",
+    "text":"the"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":36598,
+    "end":36606,
+    "tag":"definition",
+    "text":"actually"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":36644,
+    "end":36646,
+    "tag":"definition",
+    "text":"of"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":39993,
+    "end":40040,
+    "tag":"reference",
+    "text":"\\[g_{\\bullet}:\\mathbf{Z}\\langle S\\rangle\\to B\\]"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":40176,
+    "end":40180,
+    "tag":"definition",
+    "text":"have"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":40698,
+    "end":40702,
+    "tag":"reference",
+    "text":"none"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":40711,
+    "end":40713,
+    "tag":"proof",
+    "text":"an"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":43711,
+    "end":43716,
+    "tag":"proof",
+    "text":"pairs"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":43883,
+    "end":43885,
+    "tag":"definition",
+    "text":"of"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":43952,
+    "end":43957,
+    "tag":"reference",
+    "text":"group"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":43992,
+    "end":43994,
+    "tag":"theorem",
+    "text":"of"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":44796,
+    "end":44800,
+    "tag":"proof",
+    "text":"such"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":44980,
+    "end":44987,
+    "tag":"theorem",
+    "text":"abelian"
+  },
+  {
+    "fileid":"(mmd) Algebra - Lang.mmd.filtered",
+    "start":45049,
+    "end":45052,
+    "tag":"proof",
+    "text":"the"
+  }
 ]

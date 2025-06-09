@@ -2,22 +2,22 @@
 
 ## Executive Summary
 
-This analysis examines the error patterns and limitations of our few-shot prompting baseline for mathematical entity extraction. Key findings include systematic false negative issues (missing 569/964 entities), significant performance variance across domains (F1 range: 0.336), and complete failure on unannotated data.
+This analysis examines the error patterns and limitations of our few-shot prompting baseline for mathematical entity extraction. Key findings include systematic false negative issues (missing 1321/1374 entities), significant performance variance across domains (F1 range: 0.288), and complete failure on unannotated data.
 
 ## 1. Quantitative Error Analysis
 
 ### Overall Error Statistics
-- **False Negative Rate**: 59.0%
-- **Missed Entities**: 569 out of 964 true entities
-- **Performance Variance**: 0.336 F1 difference across files
+- **False Negative Rate**: 96.1%
+- **Missed Entities**: 1321 out of 1374 true entities
+- **Performance Variance**: 0.288 F1 difference across files
 - **Domain Consistency**: High variance
 
 ### Per-File Performance Breakdown
 | File | Tokens | True Entities | Predictions | F1 Score | Issue Category |
 |------|--------|---------------|-------------|----------|----------------|
-| (mmd) Complex Manifolds - Differential A... | 651 | 347 | 121 | 0.350 | Good Performance |
-| (mmd) Number Theory - Number Theory - An... | 454 | 399 | 242 | 0.015 | Severe Underperformance |
-| (mmd) A Term of Commutative Algebra - Al... | 347 | 218 | 32 | 0.225 | High False Negatives |
+| (mmd) Complex Manifolds - Differential A... | 651 | 347 | 40 | 0.320 | High False Negatives |
+| (mmd) Number Theory - Number Theory - An... | 769 | 669 | 5 | 0.033 | Severe Underperformance |
+| (mmd) A Term of Commutative Algebra - Al... | 491 | 358 | 8 | 0.119 | High False Negatives |
 
 ## 2. What Mistakes Is the Model Making?
 
@@ -71,7 +71,7 @@ Impact: Few-shot examples may not cover all proposition formats
 
 ### 2.4 Complete Failure on Unannotated Data
 
-The model produced **0 predictions** on 0 unannotated MMD files, indicating:
+The model produced **0 predictions** on 3 unannotated MMD files, indicating:
 - Severe domain shift between validation and test data
 - Overly conservative rule-based fallback system
 - Potential prompt engineering limitations
@@ -173,9 +173,9 @@ Develop better evaluation metrics that account for mathematical text complexity 
 
 ## Conclusion
 
-The current baseline reveals fundamental challenges in mathematical entity extraction, particularly around tokenization and domain adaptation. While the F1 score of 0.203 provides a reasonable starting point, the high false negative rate (59.0%) and complete failure on unannotated data indicate significant room for improvement.
+The current baseline reveals fundamental challenges in mathematical entity extraction, particularly around tokenization and domain adaptation. While the F1 score of 0.132 provides a reasonable starting point, the high false negative rate (96.1%) and complete failure on unannotated data indicate significant room for improvement.
 
 The analysis suggests that mathematical text requires specialized approaches beyond general NLP techniques, with particular attention to notation handling and domain-specific linguistic patterns.
 
 ---
-*Generated on 2025-06-08 20:08:31*
+*Generated on 2025-06-09 01:37:19*

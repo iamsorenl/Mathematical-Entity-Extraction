@@ -2,61 +2,31 @@
   "part": "Part 1 - Baseline (Few-shot)",
   "model": "meta-llama/Llama-3.1-8B-Instruct",
   "files_processed": 3,
-  "total_tokens": 1452,
-  "overall_f1": 0.20264632755343492,
-  "precision": 0.3806006382054419,
-  "recall": 0.3002754820936639,
+  "total_tokens": 1911,
+  "overall_f1": 0.13226872496839925,
+  "precision": 0.3519461385061877,
+  "recall": 0.2794348508634223,
   "per_file_results": [
     {
       "file_id": "(mmd) Complex Manifolds - Differential Analysis on Complex Manifolds - Wells.mmd-nilay-victoria-p73-75-FacebookAI_roberta-base.json",
       "num_tokens": 651,
       "num_true_entities": 347,
-      "num_pred_entities": 121,
-      "f1_score": 0.3504966205954201
+      "num_pred_entities": 40,
+      "f1_score": 0.3203798865241083
     },
     {
       "file_id": "(mmd) Number Theory - Number Theory - An Introduction to Mathematics - Coppel.mmd-nilay-laurel-p60-61-FacebookAI_roberta-base.json",
-      "num_tokens": 454,
-      "num_true_entities": 399,
-      "num_pred_entities": 242,
-      "f1_score": 0.014875566670609698
+      "num_tokens": 769,
+      "num_true_entities": 669,
+      "num_pred_entities": 5,
+      "f1_score": 0.032630558555739424
     },
     {
       "file_id": "(mmd) A Term of Commutative Algebra - Altman.mmd-victoriacochran-victoria-p18-FacebookAI_roberta-base.json",
-      "num_tokens": 347,
-      "num_true_entities": 218,
-      "num_pred_entities": 32,
-      "f1_score": 0.2245243479592083
+      "num_tokens": 491,
+      "num_true_entities": 358,
+      "num_pred_entities": 8,
+      "f1_score": 0.11915206861333924
     }
-  ],
-  "project_structure": {
-    "Mathematical-Entity-Extraction": {
-      "README.md": "This file",
-      "requirements.txt": "Python dependencies",
-      "few_shot_tagger.py": "Main few-shot prompting implementation",
-      "bio_converter.py": "BIO tagging utilities",
-      "run_part1_evaluation.py": "Complete evaluation pipeline",
-      "generate_part1_report.py": "Part 1 report generator",
-      "generate_part3_analysis.py": "Part 3 error analysis",
-      "DataExploration_Summary.txt": "Data analysis summary",
-      "Assignment 2.pdf": "Assignment specification",
-      "A2-NLP_244": {
-        "train.json": "Training annotations",
-        "val.json": "Validation annotations",
-        "file_contents.json": "Text content mapping",
-        "unannotated_mmds": "Unannotated MMD files"
-      },
-      "Part1_Report.md": "Generated Part 1 report",
-      "Part3_ErrorAnalysis.md": "Generated error analysis",
-      "part1_validation_results.json": "Generated validation results",
-      "part1_unannotated_predictions.json": "Generated predictions",
-      "data_exploration.py": "Data analysis script",
-      "debug_baseline.py": "Debugging utilities",
-      "evaluator.py": "Evaluation utilities",
-      "prompt_designer.py": "Prompt development tools",
-      ".gitignore": "Git ignore rules",
-      "__pycache__": "Python cache directory"
-    }
-  },
-  "note": "The LaTeX academic report is maintained separately and contains the formal writeup of this research."
+  ]
 }
